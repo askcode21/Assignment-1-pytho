@@ -1,0 +1,75 @@
+
+Part A: 
+
+Q5."Write a function that takes a list of strings an prints them, one per line, in a rectangular frame. For example the list [""Hello"", ""World"", ""in"", ""a"", ""frame""] gets printed as:
+
+*********
+* Hello  *
+* World  *
+* in     *
+* a      *
+* frame  *
+*********"
+
+Ans: ============================================
+
+
+lis = ["Hello", "World", "in", "a", "frame"]  #list 
+
+longer = len(max(lis, key=len))              #findig length of list 
+
+line = '*' * (longer + 4)                    # assigning variable to create straight line 
+
+print(line)                                   # printing line "*********"     
+
+for word in lis:                              # used for loop 
+
+    print(f'* {word:{longer}} *')            # used formatted string f'
+
+print(line)
+
+
+
+
+=============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Part B:
+
+Q.1 ) Develop a Python Program to check if a given string is palindrome or not ? (Example for an Palindrome is abcba looks same from both ends)
+
+Ans:===============================================
+  
+
+n=(input("Enter String:"))
+
+ans= n[::-1]
+
+if n==ans:
+    print(n,"Is palindrome ")
+else:
+    print(n,"Is not palindrome")
+
+
+ex:  
+    Enter String: abba
+    abba Is Palindrome
+
+Enter String: abcb
+    abcb Is not a palindrome
